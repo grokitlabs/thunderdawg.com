@@ -6,10 +6,13 @@ description: A weather app by dogs, for dogs with that dawg in 'em. Coming soon.
 
 <style>
   /* Placeholder-only layout. The full component styling still lives in
-     main.css, untouched, ready for when the real content comes back. */
+     main.css, untouched, ready for when the real content comes back.
+     The wordmark is pinned to the top; TJ and the copy center in the rest. */
   .hold{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
-    align-items:center;justify-content:center;text-align:center;padding:48px 22px 56px}
-  .hold .mast{justify-content:center;padding:0;margin-bottom:40px}
+    align-items:center;text-align:center;padding:0 22px 40px}
+  .hold .mast{justify-content:center;padding:32px 0 0;margin:0}
+  .hold-main{flex:1 0 auto;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;padding:40px 0}
   .hold .portrait{max-width:288px;margin:0 0 34px}
   .hold .kick{margin-bottom:14px}
   .hold h1{font-size:clamp(29px,6vw,46px);max-width:16ch;margin:0 auto}
@@ -28,14 +31,16 @@ description: A weather app by dogs, for dogs with that dawg in 'em. Coming soon.
     <div class="wm"><span class="a">THUNDER</span> <span class="b">DAWG</span></div>
   </div>
 
-  <figure class="portrait">
-    <img src="{{ '/assets/images/tj-portrait.png' | relative_url }}" alt="TJ, a golden retriever, sitting with one paw raised">
-  </figure>
+  <div class="hold-main">
+    <figure class="portrait">
+      <img src="{{ '/assets/images/tj-portrait.png' | relative_url }}" alt="TJ, a golden retriever, sitting with one paw raised">
+    </figure>
 
-  <p class="kick">By dogs · for dogs</p>
-  <h1>A weather app for everyone with that dawg in ’em.</h1>
-  <p class="lede">New tricks on the way.</p>
+    <p class="kick">By dogs · for dogs</p>
+    <h1>A weather app for everyone with that dawg in ’em.</h1>
+    <p class="lede">New tricks on the way.</p>
 
-  <div class="soon">Coming soon</div>
+    <div class="soon">Coming soon</div>
+  </div>
 
 </div>
